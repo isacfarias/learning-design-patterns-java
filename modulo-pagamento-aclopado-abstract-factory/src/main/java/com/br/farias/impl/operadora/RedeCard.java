@@ -1,4 +1,4 @@
-package com.br.farias.operadora;
+package com.br.farias.impl.operadora;
 
 import java.math.BigDecimal;
 

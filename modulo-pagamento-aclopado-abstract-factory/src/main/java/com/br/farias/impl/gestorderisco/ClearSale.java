@@ -1,4 +1,4 @@
-package com.br.farias.gestorderisco;
+package com.br.farias.impl.gestorderisco;
 
 import java.math.BigDecimal;
 

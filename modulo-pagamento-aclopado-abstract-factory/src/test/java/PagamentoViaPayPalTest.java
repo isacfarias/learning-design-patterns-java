@@ -7,12 +7,8 @@ import org.junit.Test;
 
 import com.br.farias.core.exceptions.AlertaDeRiscoException;
 import com.br.farias.core.exceptions.CapturaNaoAutorizadaException;
-import com.br.farias.core.factory.PayPalPagmentoModuloFactory;
-import com.br.farias.core.interfaces.GestorDeRisco;
-import com.br.farias.core.interfaces.Operadora;
-import com.br.farias.gestorderisco.ClearSale;
-import com.br.farias.operadora.RedeCard;
-import com.br.farias.pagamento.Pagamento;
+import com.br.farias.core.pagamento.Pagamento;
+import com.br.farias.impl.factory.PayPalPagmentoModuloFactory;
 
 public class PagamentoViaPayPalTest {
 	

@@ -1,4 +1,4 @@
-package com.br.farias.pagamento;
+package com.br.farias.core.pagamento;
 
 import java.math.BigDecimal;
 
