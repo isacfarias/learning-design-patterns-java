@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import com.br.farias.core.exceptions.AlertaDeRiscoException;
 import com.br.farias.core.exceptions.CapturaNaoAutorizadaException;
+import com.br.farias.core.factory.PayPalPagmentoModuloFactory;
 import com.br.farias.core.interfaces.GestorDeRisco;
 import com.br.farias.core.interfaces.Operadora;
 import com.br.farias.gestorderisco.ClearSale;
@@ -19,9 +20,7 @@ public class PagamentoViaPayPalTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		Operadora    operadora     = new RedeCard();
-		GestorDeRisco gestorDeRisco = new ClearSale();
-		pagamento = new Pagamento(operadora, gestorDeRisco);
+		pagamento = new Pagamento(new PayPalPagmentoModuloFactory());
 	}
 
 	@Test
