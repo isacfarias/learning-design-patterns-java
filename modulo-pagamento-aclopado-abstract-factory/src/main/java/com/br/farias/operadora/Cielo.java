@@ -1,10 +1,11 @@
-package operadora;
+package com.br.farias.operadora;
 
 import java.math.BigDecimal;
 
-import exceptions.CapturaNaoAutorizadaException;
+import com.br.farias.core.exceptions.CapturaNaoAutorizadaException;
+import com.br.farias.core.interfaces.Operadora;
 
-public class Cielo {
+public class Cielo implements Operadora {
 	
 	private Long codigoConfirmacao = -1L;
 	

@@ -1,11 +1,11 @@
-package gestorderisco;
+package com.br.farias.gestorderisco;
 
 import java.math.BigDecimal;
 
-import exceptions.AlertaDeRiscoException;
+import com.br.farias.core.exceptions.AlertaDeRiscoException;
+import com.br.farias.core.interfaces.GestorDeRisco;
 
-public class FControl {
-
+public class FControl implements GestorDeRisco {
 	
 	public void avaliarRisco(String cartao, BigDecimal valor) throws AlertaDeRiscoException {
 		if (cartao.startsWith("7777")) 

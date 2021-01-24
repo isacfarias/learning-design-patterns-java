@@ -1,4 +1,4 @@
-package exceptions;
+package com.br.farias.core.exceptions;
 
 public class CapturaNaoAutorizadaException extends Exception {
 

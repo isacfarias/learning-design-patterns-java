@@ -9,18 +9,18 @@ import com.br.farias.core.exceptions.AlertaDeRiscoException;
 import com.br.farias.core.exceptions.CapturaNaoAutorizadaException;
 import com.br.farias.core.interfaces.GestorDeRisco;
 import com.br.farias.core.interfaces.Operadora;
-import com.br.farias.gestorderisco.FControl;
-import com.br.farias.operadora.Cielo;
+import com.br.farias.gestorderisco.ClearSale;
+import com.br.farias.operadora.RedeCard;
 import com.br.farias.pagamento.Pagamento;
 
-public class PagamentoViaPagSeguroTest {
+public class PagamentoViaPayPalTest {
 	
 	private Pagamento pagamento;
 	
 	@Before
 	public void setUp() throws Exception {
-		Operadora    operadora     = new Cielo();
-		GestorDeRisco gestorDeRisco = new FControl();
+		Operadora    operadora     = new RedeCard();
+		GestorDeRisco gestorDeRisco = new ClearSale();
 		pagamento = new Pagamento(operadora, gestorDeRisco);
 	}
 
@@ -31,12 +31,18 @@ public class PagamentoViaPagSeguroTest {
 	}
 	
 	@Test(expected=CapturaNaoAutorizadaException.class)
-	public void deveNegarCaptura_cartaoInvalido() throws CapturaNaoAutorizadaException, AlertaDeRiscoException {
-		pagamento.autorizar("5555.2222", new BigDecimal("2000"));
+	public void deveNegarCaptura_valorAcimaDoLimiteParaCartao() throws CapturaNaoAutorizadaException, AlertaDeRiscoException {
+		pagamento.autorizar("2222.2222", new BigDecimal("2000"));
+	}
+	
+	@Test
+	public void deveAutorizarVenda_valorAltoComCartaoValido() throws CapturaNaoAutorizadaException, AlertaDeRiscoException {
+		Long confirmacao = pagamento.autorizar("3333.2222", new BigDecimal("2000"));
+		assertNotNull(confirmacao);
 	}
 	
 	@Test(expected=AlertaDeRiscoException.class)
 	public void deveGerarAlertaDeRisco() throws CapturaNaoAutorizadaException, AlertaDeRiscoException {
-		pagamento.autorizar("7777.2222", new BigDecimal("5500"));
+		pagamento.autorizar("1111.2222", new BigDecimal("5500"));
 	}
 }
