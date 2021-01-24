@@ -44,7 +44,7 @@ public class NotaFicalBuilder {
 			throw new Exception("Formato de valor não aceito");
 		}
 		
-		this.notaFiscal.setProdutos(Arrays.asList(new Produto(nome, quantidade, vlr)));
+		this.notaFiscal.getProdutos().add(new Produto(nome, quantidade, vlr));
 		return this;
 	}
 	
