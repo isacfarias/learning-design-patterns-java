@@ -1,6 +1,3 @@
-package snippet;
-
-public class Snippet {
 	<contatos>
 		<contato>
 			<nome>João Silva</nome>
@@ -15,5 +12,3 @@ public class Snippet {
 			<email>renato@email.com</email>
 		</contato>
 	</contatos>
-}
-
