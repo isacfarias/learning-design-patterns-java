@@ -1,5 +1,14 @@
 package contato;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.thoughtworks.xstream.XStream;
+
+import model.Contato;
+import repository.Contatos;
+
 public class ContatosXML implements Contatos {
 
 	private Map<String, String> contatosEmCache = new HashMap<>();
