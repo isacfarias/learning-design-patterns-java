@@ -1,15 +1,15 @@
-	<contatos>
-		<contato>
-			<nome>João Silva</nome>
-			<email>joao@email.com</email>
-		</contato>
-		<contato>
-			<nome>Maria Rita</nome>
-			<email>maria@email.com</email>
-		</contato>
-		<contato>
-			<nome>Renato Aragão</nome>
-			<email>renato@email.com</email>
-		</contato>
-	</contatos>
+<contatos>
+	<contato>
+		<nome>João Silva</nome>
+		<email>joao@email.com</email>
+	</contato>
+	<contato>
+		<nome>Maria Rita</nome>
+		<email>maria@email.com</email>
+	</contato>
+	<contato>
+		<nome>Renato Aragão</nome>
+		<email>renato@email.com</email>
+	</contato>
+</contatos>
 
