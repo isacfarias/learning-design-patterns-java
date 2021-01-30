@@ -13,7 +13,7 @@ public class PedidoImportaTest {
 	@Test
 	public void retornaTrue_SeImportarPedidos() {
 		
-		PedidoFonte pedidos = new PedidosXML("pedidos.xml");
+		PedidoFonte pedidos = new PedidosXML();
 		List<Pedido> list = pedidos.pedidos();
 		
 		assertTrue("Pedido processado ", !list.isEmpty());

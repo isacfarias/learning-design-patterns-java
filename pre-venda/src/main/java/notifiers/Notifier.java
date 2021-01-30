@@ -1,6 +1,9 @@
 package notifiers;
 
+import java.util.List;
+
 import listener.Listener;
+import model.Pedido;
 
 public interface Notifier {
 	
@@ -11,8 +14,8 @@ public interface Notifier {
 	
 	public void notifyListeners();
 	
-	public void addPedidos();
+	public void addPedidos(List<Pedido> pedidos);
 	
-	public void getPedidos();
+	public List<Pedido> getPedidos();
 
 }
