@@ -24,10 +24,11 @@ public class FaturamentoListener implements Listener {
 		System.out.println(" ");
 		System.out.println("/********************** -> Faturando pedido <- ********************/");
 		for (Pedido pedido : pedidos) {
+			
 			System.out.print("Item: "+pedido.getDescricao());
 			System.out.print(" - Quantidade: "+pedido.getQuantidade());
 			System.out.println(" - Valor: "+pedido.getValor());
-			valorTotal = valorTotal.add(pedido.getValor());
+			valorTotal = valorTotal.add(pedido.getValor().multiply(new BigDecimal(pedido.getQuantidade())));
 		}
 		System.out.println("Valor total: "+valorTotal);
 		System.out.println("/*******************************************************************/");
