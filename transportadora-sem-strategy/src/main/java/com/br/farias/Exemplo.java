@@ -1,4 +1,10 @@
 package com.br.farias;
+
+import java.util.Scanner;
+
+import com.br.farias.service.Frete;
+import com.br.farias.service.TipoFrete;
+
 public class Exemplo {
 
 	public static void main(String[] args) {
